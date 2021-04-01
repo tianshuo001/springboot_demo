@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jj.dao.AppCodeDao">
+    <resultMap id="appCodeMap" type="com.jj.entity.AppCode">
+        <id property="id" column="id"/>
+        <result property="appId" column="app_id"/>
+        <result property="appName" column="app_name"/>
+    </resultMap>
+
+    <select id="getAppCodes" resultMap="appCodeMap">
+        select * from app_codes;
+    </select>
+</mapper>
